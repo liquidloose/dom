@@ -26,18 +26,14 @@ blackDiv.appendChild(meToo);
 
 const btn = document.querySelector("#btn");
 
-btn.addEventListener("click", () => {
-  alert("Hello World");
-});
-
-btn.addEventListener("click", () => {
-  alert("I love lamp");
-});
-
-btn.addEventListener("click", () => {
-  alert("Cats are cool");
-});
-
 btn.addEventListener("click", function (e) {
   e.target.style.background = "orange";
+});
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    alert("It worked!");
+  });
 });
